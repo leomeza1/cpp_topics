@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "/home/eol/Desktop/cpp_topics/reference_variables"
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "cstring": "cpp"
+    }
 }
