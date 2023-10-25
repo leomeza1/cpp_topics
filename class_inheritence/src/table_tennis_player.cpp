@@ -11,7 +11,12 @@ TableTennisPlayer::TableTennisPlayer(const char * fn, const char * ln, bool ht)
     hasTable = ht;
 }
 
-void TableTennisPlayer::Name() const
+const char * TableTennisPlayer::Name() const
 {
-    std::cout << lastname << ", " << firstname;
+    return lastname;
+}
+
+const char * TableTennisPlayer::PlayerType() const
+{
+    return "Table Tennis Player";
 }

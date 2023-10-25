@@ -12,29 +12,28 @@ int main(int argc, char **argv)
     cout << "class_inheritence" << endl;
     cout << "*************************************" << endl << endl;
 
-    TableTennisPlayer player1("Chuck", "Blizzard", false);
-    RatedPlayer rplayer1(1140, "Mallory", "Duck", true);
+    /*
+     * Instantiate an object of the base class (TableTennisPlayer)
+     */
+    TableTennisPlayer tennis_player("Chuck", "Blizzard", false);
+    cout << "Name: " << tennis_player.Name() << " is a " << tennis_player.PlayerType() << endl;
+    cout << "Has Table: " << std::boolalpha << tennis_player.HasTable() << endl << endl;
 
-    rplayer1.Name();
-    if(rplayer1.HasTable())
-        cout <<  ": has a table.\n";
-    else
-        cout << ": doesn't have a table.\n";
+    /*
+     * Instantiate an object of the derived class (RatedPlayer)
+     */
+    RatedPlayer rated_player(1140, "Mallory", "Duck", true);
+    cout << "Name: " << rated_player.Name() << " is a " << rated_player.PlayerType() << endl;
+    cout << "Rating: " << rated_player.Rating() << endl;
+    cout << "Has Table: " << std::boolalpha << rated_player.HasTable() << endl << endl;
 
-    player1.Name();
-    if(player1.HasTable())
-        cout << ": has a table.\n";
-    else
-        cout << ": doesn't have a table.\n";
-
-    cout << "Name: ";
-    rplayer1.Name();
-    cout << "; Rating: " << rplayer1.Rating() << endl;
-
-    RatedPlayer rplayer2(1212, player1);
-    cout << "Name: ";
-    rplayer2.Name();
-    cout << "; Rating: " << rplayer2.Rating() << endl;
+    /*
+     * Instantiate an object of the derived class (RatedPlayer) using the copy constructor
+     */
+    RatedPlayer another_rated_player(1212, tennis_player);
+    cout << "Name: " << another_rated_player.Name() << " is a " << another_rated_player.PlayerType() << endl;
+    cout << "Rating: " << another_rated_player.Rating() << endl;
+    cout << "Has Table: " << std::boolalpha << another_rated_player.HasTable() << endl << endl;
 
     return EXIT_SUCCESS;
 }

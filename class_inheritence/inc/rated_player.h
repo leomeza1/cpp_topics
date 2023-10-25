@@ -26,6 +26,8 @@ class RatedPlayer : public TableTennisPlayer
 
         RatedPlayer(unsigned int r, const TableTennisPlayer & tp);
 
+        const char * PlayerType() const;
+
         unsigned int Rating()
         {
             return rating;

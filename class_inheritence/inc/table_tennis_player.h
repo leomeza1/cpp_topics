@@ -17,7 +17,9 @@ class TableTennisPlayer
 
         TableTennisPlayer(const char * fn = "none", const char * ln = "none", bool ht = false);
 
-        void Name() const;
+        const char * Name() const;
+
+        const char * PlayerType() const;
 
         bool HasTable() const
         {

@@ -20,3 +20,8 @@ RatedPlayer::RatedPlayer(unsigned int r, const TableTennisPlayer & tp)
     // This is legal too
     //rating = r;
 }
+
+const char * RatedPlayer::PlayerType() const
+{
+    return "Rated Table Tennis Player";
+}
